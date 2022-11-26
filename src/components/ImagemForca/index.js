@@ -1,7 +1,7 @@
 import ImagemForcaS from "./ImagemForcaS";
 
-export default function ImagemForca(){
+export default function ImagemForca({imageForca}){
     return(
-        <ImagemForcaS>Aqui vai a imagem</ImagemForcaS>
+        <ImagemForcaS src={imageForca}></ImagemForcaS>
     )
 }

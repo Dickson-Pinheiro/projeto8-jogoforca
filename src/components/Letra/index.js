@@ -1,7 +1,8 @@
-import {LetrasS} from "./LetrasS";
+import {LetraS} from "./LetraS"
 
-export default function Letra(){
+export default function Letra({children}){
     return(
-        <LetrasS>Aqui vão as letras</LetrasS>
+        <LetraS>{children}</LetraS>
     )
+    
 }

@@ -1,14 +1,17 @@
 import BotaoIniciar from "../BotaoIniciar"
 import ImagemForca from "../ImagemForca"
 import PalavraJogo from "../PalavraJogo"
-import {JogoS} from "./JogoS"
+import {JogoS, ContainerButtonPalavra} from "./JogoS"
 
-export default function Jogo() {
+export default function Jogo({imageForca}) {
     return (
         <JogoS>
-            <ImagemForca/>
+            <ImagemForca imageForca={imageForca}/>
+            <ContainerButtonPalavra>
             <BotaoIniciar >Escolher Palavra</BotaoIniciar>
             <PalavraJogo />
+            </ContainerButtonPalavra>
         </JogoS>
     )
 }
+

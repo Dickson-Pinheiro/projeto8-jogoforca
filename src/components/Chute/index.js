@@ -1,6 +1,6 @@
 import {ChuteS} from "./ChuteS"
 
-export default function Chute({chute, setChute, palavra, setColor, setPalavraOculta}){
+export default function Chute({chute, setChute, setColor, setPalavraOculta, palavra, setImagemVisivel, forca6}){
 
     function digitarChute(e){
         setChute(e.target.value)
@@ -10,7 +10,11 @@ export default function Chute({chute, setChute, palavra, setColor, setPalavraOcu
         if(chute === palavra){
             setColor("green")
             setPalavraOculta(chute)
+            return
         }
+        setColor("red")
+        setPalavraOculta(palavra)
+        setImagemVisivel(forca6)
     }
     
     return(

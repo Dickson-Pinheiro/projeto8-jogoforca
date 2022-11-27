@@ -31,7 +31,7 @@ function App() {
       <GlobalStyle />
       <Jogo color={color} setColor={setColor} imageForca={imagemVisivel} palavra={palavra} setPalavra={setPalavra} palavraOculta={palavraOculta} setPalavraOculta={setPalavraOculta} letrasIncorretas={letrasIncorretas}/>
       <Letras setColor={setColor} setLetrasSugeridas={setLetrasSugeridas} letrasSugeridas={letrasSugeridas} setImagemVisivel={setImagemVisivel} imagesForca={imagesForca} palavra={palavra} setPalavraOculta={setPalavraOculta} palavraOculta={palavraOculta} letrasIncorretas={letrasIncorretas} setLetrasIncorretas={setLetrasIncorretas} setPalavra={setPalavra}/>
-      <Chute chute={chute} setChute={setChute} palavra={palavra} palavraOculta={palavraOculta} setPalavraOculta={setPalavraOculta} setColor={setColor}/>
+      <Chute setImagemVisivel={setImagemVisivel} forca6={forca6} chute={chute} setChute={setChute} palavra={palavra} palavraOculta={palavraOculta} setPalavraOculta={setPalavraOculta} setColor={setColor}/>
     </AppContainer>
   );
 }

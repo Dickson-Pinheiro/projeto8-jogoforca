@@ -19,17 +19,19 @@ const imagesForca = [forca0, forca1, forca2, forca3, forca4, forca5, forca6]
 
 function App() {
   const [chute, setChute] = useState("")
-
-  function digitarChute(e){
-    setChute(e.target.value)
-  }
+  const [letrasSugeridas, setLetrasSugeridas] = useState([])
+  const [letrasIncorretas, setLetrasIncorretas] = useState([])
+  const [palavra, setPalavra] = useState("")
+  const [imagemVisivel, setImagemVisivel] = useState(imagesForca[0])
+  const [palavraOculta, setPalavraOculta] = useState("")
+  const [color, setColor] = useState("black")
 
   return (
     <AppContainer>
       <GlobalStyle />
-      <Jogo imageForca={imagesForca[0]}/>
-      <Letras />
-      <Chute value={chute} digitarChute={digitarChute}/>
+      <Jogo color={color} setColor={setColor} imageForca={imagemVisivel} palavra={palavra} setPalavra={setPalavra} palavraOculta={palavraOculta} setPalavraOculta={setPalavraOculta} letrasIncorretas={letrasIncorretas}/>
+      <Letras setColor={setColor} setLetrasSugeridas={setLetrasSugeridas} letrasSugeridas={letrasSugeridas} setImagemVisivel={setImagemVisivel} imagesForca={imagesForca} palavra={palavra} setPalavraOculta={setPalavraOculta} palavraOculta={palavraOculta} letrasIncorretas={letrasIncorretas} setLetrasIncorretas={setLetrasIncorretas} setPalavra={setPalavra}/>
+      <Chute chute={chute} setChute={setChute} palavra={palavra} palavraOculta={palavraOculta} setPalavraOculta={setPalavraOculta} setColor={setColor}/>
     </AppContainer>
   );
 }
